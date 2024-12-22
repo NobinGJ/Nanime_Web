@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+/* Evita que la página sea desplazable */
+html, body {
+    height: 100%; /* Asegura que ocupen toda la altura de la pantalla */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Desactiva el scroll */
+}
+
+
+/* Estilo para el contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-direction: column; /* Asegura que los elementos se apilen */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Ocupa toda la anchura */
+    overflow: hidden;
+    position: relative;
+}
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+}
+
+.context h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+/* Fondo animado */
+.area {
+    background: linear-gradient(135deg, #2d2d2d, #000000, #6a040f);
+    background-size: 200% 200%; 
+    animation: gradientAnimation 10s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Aseguramos que el fondo esté detrás */
+}
+
+.area {
+    height: 100%; /* Asegura que el fondo ocupe toda la altura */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Animación de círculos */
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    background-image: url('Resource/fondo.png');
+    background-size: cover;
+    background-position: center;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+/* Animaciones de círculos */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+/* Estilo del contenido */
+.content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo img {
+    max-width: 100%; /* Asegura que el logo no se salga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 350px; /* Limita la altura máxima para que no se haga demasiado grande */
+    margin-bottom: 10px;
+}
+
+/* Información */
+.info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.actions .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.actions .btn:hover {
+  transform: scale(1.05);
+  background-color: #444;
+}
+
+.actions .btn img {
+  width: 25px;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Estilo para GitHub */
+.actions .github {
+  background-color: #333;
+  border: 2px solid #fff;
+}
+
+/* Estilo para Descargar */
+.actions .download {
+  background-color: #d32f2f;
+  border: 2px solid #fff;
+}
