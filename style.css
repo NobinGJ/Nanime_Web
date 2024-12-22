@@ -74,56 +74,142 @@ html, body {
   }
 }
 
+/* Animación de círculos */
 .circles li {
     position: absolute;
     display: block;
     list-style: none;
-    width: 150px; /* Aumentamos el tamaño de las imágenes */
-    height: 150px; /* Aumentamos el tamaño de las imágenes */
-    background-image: url('Resource/fondo.png'); 
+    width: 120px; /* Tamaño ajustado */
+    height: 120px; /* Tamaño ajustado */
+    background-image: url('Resource/fondo.png');
     background-size: cover;
     background-position: center;
-    animation: animate 25s linear infinite;
+    animation: animate 30s linear infinite; /* Animación más lenta */
     bottom: -150px;
+    border-radius: 50%; /* Redondear los bordes para hacerlos círculos */
+    opacity: 0.7;
 }
 
-/* Animaciones de círculos */
-@keyframes animate {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-}
-
-/* Animación de círculos en diferentes posiciones */
+/* Variación de los círculos con diferentes tamaños y animaciones */
 .circles li:nth-child(1) {
-    left: 15%;
-    animation-duration: 20s; /* Duración más larga */
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    animation-duration: 40s;
 }
 
 .circles li:nth-child(2) {
-    left: 30%;
-    animation-duration: 30s;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 25s;
+    animation-delay: 5s;
 }
 
 .circles li:nth-child(3) {
     left: 50%;
-    animation-duration: 25s;
+    width: 100px;
+    height: 100px;
+    animation-duration: 30s;
+    animation-delay: 2s;
 }
 
 .circles li:nth-child(4) {
     left: 70%;
-    animation-duration: 22s;
+    width: 120px;
+    height: 120px;
+    animation-duration: 50s;
+    animation-delay: 8s;
 }
 
-/* Puedes continuar variando las posiciones y duración de las animaciones */
+.circles li:nth-child(5) {
+    left: 85%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 20s;
+    animation-delay: 10s;
+}
+
+/* Animación para hacer que los círculos se deslicen y roten */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Empieza en la posición original */
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(1080deg); /* Rotación más fluida */
+        opacity: 0; /* Se desvanece al final */
+        border-radius: 50%; /* Círculo perfecto */
+    }
+}
+/* Media Query para Pantallas Pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .circles li {
+        width: 80px; /* Reducimos el tamaño de los círculos */
+        height: 80px; /* Reducimos el tamaño de los círculos */
+    }
+
+    .circles li:nth-child(1) {
+        width: 120px; /* Ajustamos los tamaños */
+        height: 120px;
+    }
+
+    .circles li:nth-child(2) {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circles li:nth-child(3) {
+        width: 90px;
+        height: 90px;
+    }
+
+    .circles li:nth-child(4) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circles li:nth-child(5) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Media Query para Pantallas Extra Pequeñas (Móviles Muy Pequeños) */
+@media (max-width: 480px) {
+    .circles li {
+        width: 60px; /* Círculos aún más pequeños */
+        height: 60px;
+    }
+
+    .circles li:nth-child(1) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circles li:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circles li:nth-child(3) {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circles li:nth-child(4) {
+        width: 80px;
+        height: 80px;
+    }
+
+    .circles li:nth-child(5) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 /* Estilo del contenido */
 .content {
