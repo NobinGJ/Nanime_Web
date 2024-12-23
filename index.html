@@ -45,17 +45,38 @@
           personalizadas, y mucho más.</p>
       </div>
 
-      <!-- Enlaces de GitHub y Descarga -->
+      <!-- Botones -->
       <div class="actions">
         <a href="https://github.com/NobinGJ/Nanime" class="btn github">
           <img src="Resource/github-mark.png" alt="GitHub"> GitHub
         </a>
         <a href="ruta_de_descarga" class="btn download">
-          <img src="Resource/descargar.png" alt="Descarga"> Descargar
+          <img src="Resource/descargar.png" alt="Descargar"> Descargar
         </a>
       </div>
+
     </div>
-  </div>
+    <script>
+      window.onload = function () {
+        const circles = document.querySelectorAll('.circles li');
+
+        circles.forEach(circle => {
+          const randomWidth = Math.floor(Math.random() * 100) + 50; // Tamaño aleatorio entre 50px y 150px
+          const randomHeight = randomWidth; // Hacemos el círculo cuadrado
+          const randomLeft = Math.floor(Math.random() * 100); // Posición aleatoria de izquierda a derecha
+          const randomAnimationDuration = Math.floor(Math.random() * 30) + 10; // Duración aleatoria entre 10s y 40s
+          const randomAnimationDelay = Math.floor(Math.random() * 10); // Retraso aleatorio entre 0s y 10s
+
+          // Asignar los valores aleatorios al círculo
+          circle.style.width = randomWidth + 'px';
+          circle.style.height = randomHeight + 'px';
+          circle.style.left = randomLeft + '%';
+          circle.style.animationDuration = randomAnimationDuration + 's';
+          circle.style.animationDelay = randomAnimationDelay + 's';
+        });
+      }
+
+    </script>
 </body>
 
 </html>
