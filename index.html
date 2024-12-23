@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nanime</title>
 
+  <!-- Meta tags para Open Graph (WhatsApp, Facebook, etc.) -->
+  <meta property="og:title" content="Nanime - Tu app de anime">
+  <meta property="og:description" content="Disfruta de tu anime favorito con nuestra app multiplataforma. Accede a episodios actualizados, listas personalizadas, y mucho más.">
+  <meta property="og:image" content="https://i.imgur.com/MGqmdR7.jpg"> <!-- Aquí pones el enlace directo de la imagen -->
+  <meta property="og:url" content="https://nobingj.github.io/Nanime_Web/"> <!-- Reemplaza con la URL de tu sitio -->
+  <meta property="og:type" content="website">
+
+  <!-- Meta tags para Twitter -->
+  <meta name="twitter:title" content="Nanime - Tu app de anime">
+  <meta name="twitter:description" content="Disfruta de tu anime favorito con nuestra app multiplataforma. Accede a episodios actualizados, listas personalizadas, y mucho más.">
+  <meta name="twitter:image" content="https://i.imgur.com/MGqmdR7.jpg"> <!-- Aquí pones el enlace directo de la imagen -->
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Icono de la página -->
   <link rel="icon" type="image/png" href="Resource/icon-web.ico">
 
@@ -41,8 +54,7 @@
       <!-- Información de la página -->
       <div class="info">
         <h1>Nanime</h1>
-        <p>Disfruta de tu anime favorito con nuestra app multiplataforma. Accede a episodios actualizados, listas
-          personalizadas, y mucho más.</p>
+        <p>Disfruta de tu anime favorito con nuestra app multiplataforma. Accede a episodios actualizados, listas personalizadas, y mucho más.</p>
       </div>
 
       <!-- Botones -->
@@ -56,27 +68,28 @@
       </div>
 
     </div>
-    <script>
-      window.onload = function () {
-        const circles = document.querySelectorAll('.circles li');
+  </div>
 
-        circles.forEach(circle => {
-          const randomWidth = Math.floor(Math.random() * 100) + 50; // Tamaño aleatorio entre 50px y 150px
-          const randomHeight = randomWidth; // Hacemos el círculo cuadrado
-          const randomLeft = Math.floor(Math.random() * 100); // Posición aleatoria de izquierda a derecha
-          const randomAnimationDuration = Math.floor(Math.random() * 30) + 10; // Duración aleatoria entre 10s y 40s
-          const randomAnimationDelay = Math.floor(Math.random() * 10); // Retraso aleatorio entre 0s y 10s
+  <script>
+    window.onload = function () {
+      const circles = document.querySelectorAll('.circles li');
 
-          // Asignar los valores aleatorios al círculo
-          circle.style.width = randomWidth + 'px';
-          circle.style.height = randomHeight + 'px';
-          circle.style.left = randomLeft + '%';
-          circle.style.animationDuration = randomAnimationDuration + 's';
-          circle.style.animationDelay = randomAnimationDelay + 's';
-        });
-      }
+      circles.forEach(circle => {
+        const randomWidth = Math.floor(Math.random() * 100) + 50; // Tamaño aleatorio entre 50px y 150px
+        const randomHeight = randomWidth; // Hacemos el círculo cuadrado
+        const randomLeft = Math.floor(Math.random() * 100); // Posición aleatoria de izquierda a derecha
+        const randomAnimationDuration = Math.floor(Math.random() * 30) + 10; // Duración aleatoria entre 10s y 40s
+        const randomAnimationDelay = Math.floor(Math.random() * 10); // Retraso aleatorio entre 0s y 10s
 
-    </script>
+        // Asignar los valores aleatorios al círculo
+        circle.style.width = randomWidth + 'px';
+        circle.style.height = randomHeight + 'px';
+        circle.style.left = randomLeft + '%';
+        circle.style.animationDuration = randomAnimationDuration + 's';
+        circle.style.animationDelay = randomAnimationDelay + 's';
+      });
+    }
+  </script>
+
 </body>
-
 </html>
